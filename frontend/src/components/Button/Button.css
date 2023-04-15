@@ -1,0 +1,18 @@
+button {
+    height: 3rem;
+    width: 14rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    align-items: center;
+    vertical-align: top;
+    color: var(--white);
+    background-color: var(--ora);
+    border-radius: 0.6rem;
+    border: 0px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--ora2);
+}

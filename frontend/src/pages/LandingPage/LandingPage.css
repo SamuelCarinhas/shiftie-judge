@@ -1,0 +1,29 @@
+.body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 10rem;
+    padding-left: 2.5rem;
+    font-family: 'Outfit', sans-serif;
+    color: var(--dark-gray1);
+}
+
+.body .infos {
+    width: 30rem;
+}
+
+.body .infos h1 {
+    font-weight: 700;
+    font-size: 2.6rem;
+}
+
+.body .infos p {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.body .img img {
+    position: inherit;
+    padding-left: 30rem;
+    width: 46rem;
+}
