@@ -8,13 +8,13 @@ function FollowUs() {
         <div className="follow-items">
             <p>Follow us</p>
             <a href="https://www.instagram.com/" target="_blank">
-                <FontAwesomeIcon class="fontAwesomeIcon" icon={faInstagram}/>
+                <FontAwesomeIcon className="fontAwesomeIcon" icon={faInstagram}/>
             </a>
             <a href="https://www.linkedin.com/" target="_blank">
-                <FontAwesomeIcon class="fontAwesomeIcon" icon={faLinkedinIn} />
+                <FontAwesomeIcon className="fontAwesomeIcon" icon={faLinkedinIn} />
             </a>
             <a href="https://www.youtube.com/" target="_blank">
-                <FontAwesomeIcon class="fontAwesomeIcon" icon={faYoutube} />
+                <FontAwesomeIcon className="fontAwesomeIcon" icon={faYoutube} />
             </a>
         </div>
     )

@@ -1,4 +1,4 @@
-button {
+.button {
     height: 3rem;
     width: 14rem;
     font-family: 'Outfit', sans-serif;
@@ -13,6 +13,16 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.link {
+    display: flex;
+    height: inherit;
+    width: inherit;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.button:hover {
     background-color: var(--ora2);
 }

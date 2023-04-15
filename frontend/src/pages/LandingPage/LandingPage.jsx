@@ -1,7 +1,8 @@
 import React from "react";
-import { Logo, FollowUs, Button } from "../../components/components.jsx"
+import { Logo, FollowUs, Button, LinkingButton } from "../../components/components.jsx"
 import "./LandingPage.css"
 import LandingPageImage from "./../../assets/Croods Party Time.svg";
+import { Link } from "react-router-dom";
 
 function LandingPage() {
     return(
@@ -16,7 +17,8 @@ function LandingPage() {
                         online exams with automatic grading
                     </p>    
                 </div>
-                <Button label="Login" onClick={console.log(1)}/>
+                {/* TODO: Dar stilling disto (: -> Podes criancar uma class LinkButton para deixares isto mais generico*/}
+                <LinkingButton label="Login" destination="/login"></LinkingButton>
             </div>
             <div className="right-section">
                 <div className="img">

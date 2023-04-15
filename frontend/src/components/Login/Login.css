@@ -1,0 +1,47 @@
+h1 {
+    position: relative;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 2.6rem;
+    color: var(--ora);
+    padding-top: 16rem;
+    padding-left: 2.5rem;
+}
+
+form {
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.form {
+    padding-bottom: 2rem;
+}
+
+form .form .data-div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    height: 5rem;
+    width: 30rem;
+}
+
+form .form .data-div label {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+    width: inherit;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--dark-gray1);
+}
+
+form .form .data-div input {
+    height: 3rem;
+    width: inherit;
+    background-color: var(--white);
+    color: var(--dark-gray1);
+    border-radius: 0.5rem;
+    border-color: var(--dark-gray1);
+    font-size: 1.2rem;
+}
