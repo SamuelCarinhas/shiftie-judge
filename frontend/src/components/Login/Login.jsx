@@ -10,7 +10,7 @@ function Login() {
 
     return (
         <>
-            <h1>Login</h1>
+            <h1 className="loginHeader">Login</h1>
             <form onSubmit={handleSubmit(handleLogin)}>
                 <div className="form">
                     <div className="data-div">
@@ -24,7 +24,6 @@ function Login() {
                 </div>
                 
                 <button className="button">Login</button>
-
             </form>
         </>
   );

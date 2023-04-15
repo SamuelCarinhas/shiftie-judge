@@ -1,4 +1,4 @@
-h1 {
+.loginHeader {
     position: relative;
     font-family: 'Outfit', sans-serif;
     font-weight: 700;
@@ -6,6 +6,10 @@ h1 {
     color: var(--ora);
     padding-top: 16rem;
     padding-left: 2.5rem;
+}
+
+html {
+    margin: 0;
 }
 
 form {
@@ -42,6 +46,7 @@ form .form .data-div input {
     background-color: var(--white);
     color: var(--dark-gray1);
     border-radius: 0.5rem;
-    border-color: var(--dark-gray1);
+    border: 1px solid var(--dark-gray1);
     font-size: 1.2rem;
+    outline: none;
 }
