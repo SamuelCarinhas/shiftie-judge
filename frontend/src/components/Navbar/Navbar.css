@@ -1,20 +1,25 @@
 .navbar {
+    margin-top: 1rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
 }
 
 .links {
-    position: relative;
-    justify-content: space-between;
     display: flex;
+    justify-content: flex-end;
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
 }
 
 .links .link {
-    width: 10rem;
+    width: auto;
+    margin-left: 2rem;
     color: var(--dark-gray1);
 }
 

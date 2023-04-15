@@ -1,12 +1,16 @@
 import React from "react";
-import { Logo, Login } from "../../components/components.jsx"
+import './LoginPage.css';
+import {Logo, Login, Navbar, FollowUs} from "../../components/components.jsx"
 
 function LoginPage() {
     return (
-        <>
-            <Logo/>
-            <Login/>
-        </>
+        <div className="app">
+            <Navbar />
+            <div className="login-page">
+                <Login/>
+            </div>
+            <FollowUs />
+        </div>
     );
 }
 

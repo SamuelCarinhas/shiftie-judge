@@ -17,20 +17,8 @@ function Navbar(props) {
             <div className="navbar">
                 <Logo/>
                 <div className="links">
-                    {
-                        props.courses_link ? (
-                            <Link className="link" to={props.courses_link}>Courses</Link>
-                        ) : (
-                            <></>
-                        )
-                    }
-                    {
-                        props.tournaments_link ? (
-                            <Link className="link" to={props.tournaments_link}>Tournaments</Link>
-                        ) : (
-                            <></>
-                        )
-                    }
+                    <Link className="link" to="/courses">Courses</Link>
+                    <Link className="link" to="/tournaments">Tournaments</Link>
                     <div className="link">
                         <Link className="user" to={userLink(props.username)}>{props.username}</Link>
                     </div>

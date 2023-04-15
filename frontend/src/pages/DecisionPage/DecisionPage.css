@@ -1,14 +1,14 @@
 
 .menu-body {
+    height: 100%;
     width: inherit;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 10rem;
 }
 
 .menu-body .decision-menu {
-    height: inherit;
     padding-top: 2rem;
     width: 30rem;
     display: flex;
