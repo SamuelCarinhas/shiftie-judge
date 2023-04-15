@@ -1,10 +1,10 @@
-const express = require('express');
-const {check, validationResult} = require('express-validator');
-const passport = require('passport');
-const jwt = require('jsonwebtoken');
+import argon2 from 'argon2';
+import express from 'express';
+import jwt from 'jsonwebtoken';
+import passport from 'passport';
+import User from '../../schemas/user.schema.js';
+import {check, validationResult} from 'express-validator';
 const router = express.Router();
-const User = require('../../schemas/user.schema');
-const argon2 = require('argon2');
 
 router.post('/register', async (req, res) => {
     await check('email')
@@ -72,11 +72,11 @@ router.post('/login', async (req, res) => {
 
             return res.status(200).json({
                 user,
-                auth_token: jwt.sign(user, process.env.AT_SECRET, { expiresIn: '1m' }),
+                auth_token: jwt.sign(user, process.env.AT_SECRET, { expiresIn: '1w' }),
             })
         })
     })(req, res);
 
 });
 
-module.exports = router;
+export default router;

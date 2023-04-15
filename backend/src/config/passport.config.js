@@ -1,14 +1,14 @@
-const passport = require('passport');
-const passportJWT = require('passport-jwt');
-const argon2 = require('argon2');
-const User = require('../schemas/user.schema');
+import argon2 from 'argon2';
+import passportJWT from 'passport-jwt';
+import passportLocal from 'passport-local';
+import User from '../schemas/user.schema.js';
 
 const ExtractJWT = passportJWT.ExtractJwt;
 
-const LocalStrategy = require('passport-local').Strategy;
+const LocalStrategy = passportLocal.Strategy;
 const JWTStrategy = passportJWT.Strategy;
 
-passport.use(new LocalStrategy({
+const localStrategy = new LocalStrategy({
     usernameField: 'email',
     passwordField: 'password'
 },
@@ -43,9 +43,9 @@ passport.use(new LocalStrategy({
             }
         ]
     }))
-));
+);
 
-passport.use(new JWTStrategy({
+const jwtStrategy = new JWTStrategy({
     jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
     secretOrKey: process.env.AT_SECRET
 },
@@ -53,4 +53,9 @@ passport.use(new JWTStrategy({
     User.findById(jwtPayload.id)
         .then(user => cb(null, user))
         .catch(err => cb(err))
-}));
+});
+
+export default {
+    localStrategy,
+    jwtStrategy
+}
