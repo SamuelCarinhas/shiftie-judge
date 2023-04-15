@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Logo, Navbar, List } from "../../components/components.jsx"
+import { Logo, Navbar } from "../../components/components.jsx"
 import "./AllCoursesPage.css"
 import { Link } from "react-router-dom";
 import "./AllCoursesPage.css"
 
 const currentCourses = [
-    {id: 1, name: 'Hello World', link: '/courses/1'},
-    {id: 2, name: 'Installation', link: '/courses/1'}
+    {id: 1, name: 'Introdução à Programação e Resolução de Problemas', link: '/courses/1'},
+    {id: 2, name: 'Design e Multimédia', link: '/courses/1'}
 ];
 
 const allCourses = [
@@ -30,34 +30,21 @@ const allCourses = [
 function CoursesPage() {
 
     return(
-        <>
-            <Navbar courses_link="/courses" tournaments_link="/tournaments" username="joao"/>
+        <div className="app">
+            <Navbar />
             <div className="courses-body">
-                <div className="left sect">
-                    <h1 className="left title">Current courses</h1>
-                    <div className="left list left-list">
-                        <List items={currentCourses}/>
-                    </div>
-                </div>
-                <div className="right sect">
-                    <h1 className="right title">All courses</h1>
-                    <div>
-                        {
-                            allCourses.map((degree, index) => {
-                                return <div key={index}>
-                                <h2 className="right">{degree.name}</h2>
-                                <div className="right list right-list">
-                                    <List items={degree.courses}/>
-                                </div>
-                                </div>
-                            })
-                        }
-                    </div>
-                    
-                    
+                <div className="list">
+                    <h1 className="title">Courses</h1>
+                    {
+                        currentCourses.map(course =>
+                            <Link key={course.id} className="course-link" to="/teste">
+                                {course.name}
+                            </Link>
+                        )
+                    }
                 </div>
             </div>
-        </>
+        </div>
         
     );
 }
