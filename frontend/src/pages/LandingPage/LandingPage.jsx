@@ -17,7 +17,6 @@ function LandingPage() {
                         online exams with automatic grading
                     </p>    
                 </div>
-                {/* TODO: Dar stilling disto (: -> Podes criancar uma class LinkButton para deixares isto mais generico*/}
                 <LinkingButton label="Login" destination="/login"></LinkingButton>
             </div>
             <div className="right-section">

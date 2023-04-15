@@ -3,6 +3,8 @@ import FollowUs from "./FollowUs/FollowUs";
 import Button from "./Buttons/Button";
 import Login from "./Login/Login";
 import LinkingButton from "./Buttons/LinkingButton";
+import Navbar from "./Navbar/Navbar";
+import List from "./List/List";
 
 
 export {
@@ -10,5 +12,7 @@ export {
     FollowUs,
     Button,
     LinkingButton,
-    Login
+    Login,
+    Navbar,
+    List
 }

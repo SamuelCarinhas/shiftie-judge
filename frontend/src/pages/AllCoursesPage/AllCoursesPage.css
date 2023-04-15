@@ -1,0 +1,38 @@
+.courses-body {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding-top: 6rem;
+}
+
+.courses-body .sect {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50rem;
+    height: 50rem;
+}
+
+.courses-body .sect .title {
+    color: var(--ora);
+}
+
+.courses-body .sect .list {
+    width: inherit;
+    display: flex;
+    justify-content: flex-start;
+    border: 0.15rem solid var(--ora2);
+    border-radius: 10px;
+}
+
+.courses-body .sect .left-list {
+    height: 20rem;
+}
+
+.courses-body .sect .right-list {
+    height: 12rem;
+}
+
+.courses-body .sect .right {
+    opacity: 50%;
+}

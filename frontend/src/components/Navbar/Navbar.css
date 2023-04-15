@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.links {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+.links .link {
+    width: 10rem;
+    color: var(--dark-gray1);
+}
+
+.links .link .user {
+    text-decoration: none;
+    color: var(--ora);
+}
