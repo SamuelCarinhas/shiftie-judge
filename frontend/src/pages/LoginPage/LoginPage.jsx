@@ -1,6 +1,6 @@
 import React from "react";
 import './LoginPage.css';
-import {Logo, Login, Navbar, FollowUs} from "../../components/components.jsx"
+import {Logo, Login, Navbar, FollowUs} from "../../components/Components.jsx"
 
 function LoginPage() {
     return (

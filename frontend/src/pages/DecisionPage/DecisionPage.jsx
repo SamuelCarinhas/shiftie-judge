@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, LinkingButton, FollowUs} from "../../components/components.jsx"
+import {Navbar, LinkingButton, FollowUs} from "../../components/Components.jsx"
 import LandingPageImage from "./../../assets/Croods Party Time.svg";
 import "./DecisionPage.css"
 

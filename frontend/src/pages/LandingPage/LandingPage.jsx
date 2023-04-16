@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LandingPage.css"
 import LandingPageImage from "./../../assets/Croods Party Time.svg";
-import { FollowUs, LinkingButton, Navbar } from "../../components/components.jsx"
+import { FollowUs, LinkingButton, Navbar } from "../../components/Components.jsx"
 
-function LandingPage() {
+
+function LandingPage(props) {
+    const [loggedIn, setLoggedIn] = useState(false);
+
     return(
         <div className="app">
             <Navbar />
@@ -16,7 +19,14 @@ function LandingPage() {
                             online exams with automatic grading
                         </p>
                     </div>
-                    <LinkingButton label="Login" destination="/login"></LinkingButton>
+                    {
+                        loggedIn === false
+                        ?
+                        <LinkingButton label="Login" destination="/login"></LinkingButton>
+                        :
+                        <div/>
+                    }
+                    
                 </div>
                 <div className="section">
                     <div className="img">

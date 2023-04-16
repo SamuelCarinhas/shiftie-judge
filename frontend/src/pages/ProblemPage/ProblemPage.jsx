@@ -17,7 +17,7 @@ function ProblemPage() {
                 ?
                 <DesignView></DesignView>
                 :
-                    <DesignView></DesignView>
+                <DesignView></DesignView>
             }
         </div>
     )
