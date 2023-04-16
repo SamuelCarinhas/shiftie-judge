@@ -1,0 +1,27 @@
+.accepted-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    pointer-events: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    color: var(--green);
+    animation: appear 4s;
+}
+
+@keyframes appear {
+    0% {
+        font-size: 0;
+        background-color: #22222200;
+    }
+    50% {
+        font-size: 5vw;
+        background-color: #222222FF;
+    }
+    100% {
+        font-size: 0;
+        background-color: #22222200;
+    }
+}

@@ -57,6 +57,12 @@ form .form .data-div input {
     color: var(--ora2);
 }
 
+.login .errors {
+    color: red;
+    margin-left: 1rem;
+    padding: 1rem 0 1rem 0;
+}
+
 .links .link:hover {
     color: var(--ora);
 }

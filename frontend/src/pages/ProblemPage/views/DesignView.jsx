@@ -1,4 +1,6 @@
 import './DesignView.css'
+import html2canvas from "html2canvas";
+import domtoimage from 'dom-to-image';
 import { Link } from "react-router-dom";
 import Editor from 'react-simple-code-editor';
 import { highlight, languages } from 'prismjs/components/prism-core';
@@ -7,6 +9,7 @@ import 'prismjs/components/prism-markup.js';
 import 'prismjs/themes/prism.css';
 import {useEffect, useState} from "react";
 import './prism-vsc-dark-plus.css';
+import Button from "../../../components/Buttons/Button.jsx";
 
 
 function ICPCView() {
@@ -30,10 +33,12 @@ function ICPCView() {
  `
     );
 
+    const [image, setImage] = useState('');
+
     useEffect(() => {
         document.getElementById("preview").src = "data:text/html;charset=utf-8," + encodeURIComponent(code);
     }, [code]);
-
+    
     return (
         <div className="problem-page">
             <div className="description">
@@ -41,14 +46,15 @@ function ICPCView() {
                     <h2>Sum two numbers</h2>
                     <h3>Design e Multimédia</h3>
                 </div>
-                <div className="item options">
+                <div id="test" className="item options">
                     <Link to="/prev">Previous Project</Link>
                     <Link to="/next">Next Project</Link>
                 </div>
                 <div className="item preview">
-                    <div className="viewer">
+                    <div id="viewer" className="viewer">
                         <iframe id="preview" sandbox="allow-same-origin" title="Preview"></iframe>
                     </div>
+                    <img src={image}/>
                     <img width="400" height="300" src="https://cssbattle.dev/targets/46.png" />
                 </div>
             </div>
@@ -59,6 +65,9 @@ function ICPCView() {
                             <div className="title-button"></div>
                             <div className="title-button"></div>
                             <div className="title-button"></div>
+                        </div>
+                        <div className="submit">
+                            <button>Submit</button>
                         </div>
                     </div>
                     <div className="editor_wrap">

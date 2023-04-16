@@ -35,7 +35,7 @@ function ScrollableList(props) {
             {
                 dataSource.map((item, index) => {
                     return (
-                        <Link key={index} className="course-link" to="/teste">
+                        <Link key={index} className="course-link" to="/problem">
                             {item.name}
                         </Link>
                     );

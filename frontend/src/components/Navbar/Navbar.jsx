@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -8,9 +8,16 @@ import { useState } from "react";
 
 function Navbar(props) {
 
-    const userLink = (username) => {
-        return "/user?username=" + username;
-    }
+    const [data, setData] = useState(undefined);
+
+    useEffect(() => {
+        let aux = localStorage.getItem('data');
+        console.log(aux);
+        if(aux) {
+            console.log('VALID', aux);
+            setData(JSON.parse(aux));
+        }
+    }, []);
 
     return (
         <>
@@ -18,10 +25,16 @@ function Navbar(props) {
                 <Logo/>
                 <div className="links">
                     <Link className="link" to="/courses">Courses</Link>
-                    <Link className="link" to="/tournaments">Tournaments</Link>
-                    <div className="link">
-                        <Link className="user" to={userLink(props.username)}>{props.username}</Link>
-                    </div>
+                    <Link className="link" to="/tournament">Tournaments</Link>
+                    {
+                        data ?
+                        <div className="link user">
+                            <FontAwesomeIcon icon={faUser} />
+                            <Link className="user" to="/logout">{data.user.email}</Link>
+                        </div>
+                        :
+                        undefined
+                    }
                 </div>
             </div>
         </>

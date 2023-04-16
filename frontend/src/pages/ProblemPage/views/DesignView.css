@@ -8,6 +8,7 @@
 
 .problem-page .preview {
     display: flex;
+    justify-content: space-evenly;
     flex-direction: row;
 }
 
@@ -32,12 +33,14 @@
 
 .problem-page .description {
     width: calc(100% - 4rem);
-    padding: 0 2rem 1rem 2rem;
+    padding: 0 2rem 0 2rem;
+    height: auto;
+    margin-bottom: 2rem;
 }
 
 .problem-page .editor {
     width: calc(100% - 4rem);
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem 1rem 2rem;
 }
 
 .problem-page .title h1 {
@@ -148,7 +151,20 @@
 .title-bar {
     height: 40px;
     background-color: rgb(231 231 231 / 6%);
-    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.title-bar button {
+    padding: 0.4rem;
+    color: gold;
+    background-color: #00000000;
+    outline: none;
+    border: 1px solid gold;
+    border-radius: 5px;
+    margin-right: 1rem;
 }
 
 .title-text {
