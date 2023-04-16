@@ -1,9 +1,9 @@
 import './AcceptedEffect.css';
 
-function AcceptedEffect() {
+function AcceptedEffect(props) {
     return (
         <div className="accepted-effect">
-            <h1>SCORE: 100%</h1>
+            <h1>SCORE: {props.percent}%</h1>
         </div>
     )
 }

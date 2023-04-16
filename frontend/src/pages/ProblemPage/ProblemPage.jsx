@@ -21,8 +21,6 @@ function ProblemPage() {
                 :
                 <DesignView></DesignView>
             }
-            <AcceptedEffect />
-            <FireworkEffect />
         </div>
     )
 }

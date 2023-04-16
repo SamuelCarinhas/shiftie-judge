@@ -10,6 +10,9 @@ import 'prismjs/themes/prism.css';
 import {useEffect, useState} from "react";
 import './prism-vsc-dark-plus.css';
 import Button from "../../../components/Buttons/Button.jsx";
+import AcceptedEffect from '../effects/AcceptedEffect';
+import FireworkEffect from '../effects/FireworkEffect';
+import Load from './Load';
 
 
 function ICPCView() {
@@ -33,11 +36,51 @@ function ICPCView() {
  `
     );
 
+    const [loading, setLoading] = useState(false);
     const [image, setImage] = useState('');
+    const [logo, setLogo] = useState(undefined);
+    const [percent, setPercent] = useState();
 
     useEffect(() => {
         document.getElementById("preview").src = "data:text/html;charset=utf-8," + encodeURIComponent(code);
     }, [code]);
+
+    useEffect(() => {
+        fetch('https://cssbattle.dev/targets/46.png').
+        then(r => r.blob()).
+        then(r => console.log(setLogo(r)));
+    }, []);
+
+    const [data, setData] = useState(undefined);
+
+    useEffect(() => {
+        let aux = localStorage.getItem('data');
+        console.log(aux);
+        if(aux) {
+            console.log('VALID', aux);
+            setData(JSON.parse(aux));
+        }
+    }, []);
+
+    const requestEval = () => {
+        let formData = new FormData();
+        formData.append('input', code);
+        formData.append('file', logo);
+
+        fetch("http://localhost:3000/problem/submit", {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${data.auth_token}`
+            },
+            body: formData,
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            setLoading(false);
+            setPercent(data.msg);
+        });
+    }
     
     return (
         <div className="problem-page">
@@ -67,7 +110,10 @@ function ICPCView() {
                             <div className="title-button"></div>
                         </div>
                         <div className="submit">
-                            <button>Submit</button>
+                            <button onClick={() => {
+                                setLoading(true);
+                                requestEval();
+                            }}>Submit</button>
                         </div>
                     </div>
                     <div className="editor_wrap">
@@ -84,6 +130,22 @@ function ICPCView() {
                     </div>
                 </div>
             </div>
+            {
+                loading
+                ?
+                <Load />
+                :
+                undefined
+            }
+            {
+                percent ?
+                <>
+                <AcceptedEffect percent={percent} />
+                <FireworkEffect />
+                </>
+                :
+                undefined
+            }
         </div>
     )
 }

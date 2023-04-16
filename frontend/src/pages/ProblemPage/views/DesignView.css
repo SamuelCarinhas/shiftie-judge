@@ -230,3 +230,9 @@
     outline: none;
 }
 
+.editor button:hover {
+    background-color: gold;
+    color: var(--dark-gray1);
+    cursor: pointer;
+}
+
