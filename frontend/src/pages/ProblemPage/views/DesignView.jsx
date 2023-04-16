@@ -86,7 +86,7 @@ function ICPCView() {
         <div className="problem-page">
             <div className="description">
                 <div className="title">
-                    <h2>Sum two numbers</h2>
+                    <h2>Challenge #1</h2>
                     <h3>Design e Multimédia</h3>
                 </div>
                 <div id="test" className="item options">
