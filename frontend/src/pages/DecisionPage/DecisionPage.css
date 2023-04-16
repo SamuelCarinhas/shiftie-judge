@@ -1,0 +1,17 @@
+
+.menu-body {
+    height: 100%;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-body .decision-menu {
+    padding-top: 2rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

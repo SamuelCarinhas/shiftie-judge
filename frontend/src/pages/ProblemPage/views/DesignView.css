@@ -1,0 +1,232 @@
+.problem-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.problem-page .preview {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.problem-page .viewer {
+    width: 400px;
+    height: 300px;
+    border: 2px solid black;
+}
+
+.problem-page iframe {
+    background: white;
+    width: 400px;
+    height: 300px;
+    border: 0;
+    outline: 0;
+}
+
+.problem-page .preview img {
+    margin-left: 1rem;
+    border: 2px solid black;
+}
+
+.problem-page .description {
+    width: calc(100% - 4rem);
+    padding: 0 2rem 0 2rem;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.problem-page .editor {
+    width: calc(100% - 4rem);
+    padding: 0 2rem 1rem 2rem;
+}
+
+.problem-page .title h1 {
+    color: var(--dark-gray1);
+}
+
+.problem-page .title h2 {
+    color: var(--ora);
+}
+
+.problem-page .title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.problem-page .description .item {
+    margin-top: 2rem;
+}
+
+.problem-page .description a {
+    margin-right: 1rem;
+    border: 1px solid var(--ora);
+    padding: 0.4rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--dark-gray1);
+}
+
+.problem-page .description a:hover {
+    background-color: var(--ora);
+    color: var(--white);
+}
+
+.problem-page .description .sample {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.problem-page .description .submissions .submission {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.problem-page .description .submissions .fields {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    vertical-align: center;
+}
+
+.problem-page .description .submissions .item {
+    display: flex;
+    align-items: center;
+    width: 15%;
+}
+
+.problem-page .description .submissions .item.big {
+    width: 65%;
+}
+.problem-page .description .submissions .item.big svg {
+    margin-left: 1rem;
+}
+
+.problem-page .green {
+    color: var(--green);
+}
+
+.problem-page .red {
+    color: red;
+}
+
+.problem-page .description .submissions .fields.big {
+    width: 10rem;
+}
+
+.problem-page .description .sample .sample-input {
+    width: 15rem;
+}
+
+.problem-page .description .sample pre {
+    background-color: var(--ora2);
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    font-size: 13px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.window {
+    height: 100%;
+    position: relative;
+    border-radius: 6px;
+    background-color: #1a1e22;
+    color: #fff;
+    width: 100%;
+    overflow: hidden;
+}
+
+.window * {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.title-bar {
+    height: 40px;
+    background-color: rgb(231 231 231 / 6%);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.title-bar button {
+    padding: 0.4rem;
+    color: gold;
+    background-color: #00000000;
+    outline: none;
+    border: 1px solid gold;
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+
+.title-text {
+    color: #afafaf;
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    margin: 0;
+    padding: 7px 16px;
+    font-size: 15px;
+    min-width: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-text span {
+    outline: none;
+}
+
+.title-text img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.title-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title-button {
+    background-color: #3a3a3a;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    margin: 0 5px;
+}
+
+.title-button:nth-child(1) {
+    background-color: #ff5656;
+}
+.title-button:nth-child(2) {
+    background-color: #ffbc6a;
+}
+.title-button:nth-child(3) {
+    background-color: #67f772;
+}
+
+.editor_wrap {
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.editor_wrap textarea {
+    outline: none;
+}
+

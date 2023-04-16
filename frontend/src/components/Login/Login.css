@@ -1,0 +1,68 @@
+.login {
+    padding: 3rem 2rem 3rem 2rem;
+}
+
+.login-header {
+    position: relative;
+    font-weight: 700;
+    font-size: 2.6rem;
+    color: var(--ora);
+}
+
+form {
+    width: 35rem;
+}
+
+.login input {
+    padding: 0 1rem 0 1rem;
+}
+
+form .form .data-div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 2rem 0;
+}
+
+form .form .data-div label {
+    display: flex;
+    flex-direction: column;
+    height: 3rem;
+    width: inherit;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--dark-gray1);
+}
+
+form .form .data-div input {
+    height: 3rem;
+    width: inherit;
+    background-color: var(--white);
+    color: var(--dark-gray1);
+    border-radius: 0.5rem;
+    border: 1px solid var(--dark-gray1);
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.login .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login .row a {
+    text-decoration: none;
+    color: var(--ora2);
+}
+
+.login .errors {
+    color: red;
+    margin-left: 1rem;
+    padding: 1rem 0 1rem 0;
+}
+
+.links .link:hover {
+    color: var(--ora);
+}

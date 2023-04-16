@@ -1,0 +1,41 @@
+.landing-page {
+    height: 100%;
+    display: flex;
+    font-family: 'Outfit', sans-serif;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+    color: var(--dark-gray1);
+}
+
+.landing-page .infos {
+    width: 100%;
+}
+
+.landing-page .infos * {
+    margin: 0 0 2rem 0;
+}
+
+.landing-page .infos h1 {
+    font-weight: 700;
+    font-size: 2.6rem;
+}
+
+.landing-page .infos p {
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.landing-page .section.left {
+    max-width: 30%;
+    text-align: left;
+}
+
+.landing-page .section {
+    width: auto;
+    max-width: 50%;
+}
+
+.landing-page .section img {
+    width: 100%;
+}

@@ -1,0 +1,21 @@
+.follow-items {
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.follow-items p {
+    margin-left: 2rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.follow-items .fontAwesomeIcon {
+    width: 1.3rem;
+    margin-left: 1rem;
+    color: var(--black);
+}

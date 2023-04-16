@@ -1,0 +1,32 @@
+.button {
+    height: 3rem;
+    width: 14rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    align-items: center;
+    vertical-align: top;
+    color: var(--white);
+    background-color: var(--ora);
+    border-radius: 0.6rem;
+    border: 0px;
+    cursor: pointer;
+}
+
+.link {
+    display: flex;
+    height: inherit;
+    width: inherit;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.button:hover {
+    background-color: var(--ora2);
+}
+
+.courses-body .list .course-link:hover{
+box-shadow: inset 2px 3px 5px var(--white), 0px 1px 4px var(--ora);
+}
