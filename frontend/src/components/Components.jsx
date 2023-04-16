@@ -4,6 +4,7 @@ import Button from "./Buttons/Button";
 import Login from "./Login/Login";
 import LinkingButton from "./Buttons/LinkingButton";
 import Navbar from "./Navbar/Navbar";
+import ScrollableList from "./ScrollableList/ScrollableList";
 
 
 export {
@@ -12,5 +13,6 @@ export {
     Button,
     LinkingButton,
     Login,
-    Navbar
+    Navbar,
+    ScrollableList
 }
