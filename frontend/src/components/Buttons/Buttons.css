@@ -26,3 +26,7 @@
 .button:hover {
     background-color: var(--ora2);
 }
+
+.courses-body .list .course-link:hover{
+box-shadow: inset 2px 3px 5px var(--white), 0px 1px 4px var(--ora);
+}

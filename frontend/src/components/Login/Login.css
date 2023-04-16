@@ -56,3 +56,7 @@ form .form .data-div input {
     text-decoration: none;
     color: var(--ora2);
 }
+
+.links .link:hover {
+    color: var(--ora);
+}

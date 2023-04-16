@@ -26,7 +26,7 @@ function Login() {
 
                 <div className="row">
                     <button className="button">Login</button>
-                    <Link to="/forgot">Forgot password?</Link>
+                    <Link to="/forgot" className="forgot">Forgot password?</Link>
                 </div>
             </form>
         </div>
