@@ -19,6 +19,6 @@ const uploadFile = multer({
     limits: {
         fileSize: 12 * 1024 * 1024
     }
-}).array('files', 5);
+}).single('file');
 
 export default uploadFile;
